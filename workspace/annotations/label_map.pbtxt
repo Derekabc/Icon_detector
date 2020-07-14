@@ -1,0 +1,120 @@
+item {
+    id: 1
+    name: 'call'
+}
+item {
+    id: 2
+    name: 'message'
+}
+item {
+    id: 3
+    name: 'n0'
+}
+item {
+    id: 4
+    name: 'n1'
+}
+item {
+    id: 5
+    name: 'n2'
+}
+item {
+    id: 6
+    name: 'n3'
+}
+item {
+    id: 7
+    name: 'n4'
+}
+item {
+    id: 8
+    name: 'n5'
+}
+item {
+    id: 9
+    name: 'n6'
+}
+item {
+    id: 10
+    name: 'n7'
+}
+item {
+    id: 11
+    name: 'n8'
+}
+item {
+    id: 12
+    name: 'n9'
+}
+item {
+    id: 13
+    name: 'star'
+}
+item {
+    id: 14
+    name: 'n0'
+}
+item {
+    id: 15
+    name: 'sign'
+}
+item {
+    id: 16
+    name: 'videocall'
+}
+item {
+    id: 17
+    name: 'keypad'
+}
+item {
+    id: 18
+    name: 'hangup'
+}
+item {
+    id: 19
+    name: 'search'
+}
+item {
+    id: 20
+    name: 'tkeypad'
+}
+item {
+    id: 21
+    name: 'add'
+}
+item {
+    id: 22
+    name: 'tdial'
+}
+item {
+    id: 23
+    name: 'tedit'
+}
+item {
+    id: 24
+    name: 'edit'
+}
+item {
+    id: 25
+    name: 'lte'
+}
+item {
+    id: 26
+    name: 'signal'
+}
+item {
+    id: 27
+    name: '4g'
+}
+item {
+    id: 28
+    name: 'send'
+}
+item {
+    id: 29
+    name: 'tsend'
+}
+item {
+    id: 30
+    name: 'wifi'
+}
