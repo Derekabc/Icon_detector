@@ -4,6 +4,9 @@ This repository is for the internship at T-Mobile, USA.
 ## Contents
 
 
+# Build an icon Detector based on Tensorflow Object Detection API
+
+
 # Export Trained Tensorflow Models
 ## Environment Setup.
 - python=2.7
