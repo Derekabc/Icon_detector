@@ -21,7 +21,7 @@ cd object_detection
 protoc protos/*.proto --python_out=.
 ```
 
-Edit the exporter.py file under object_detection file. We rename the original exporter.py as  exporter_frozen.py
+Edit the exporter.py file under object_detection folder. We renamed the original exporter.py as  exporter_frozen.py
 
 ```
 # from workspace and run 
