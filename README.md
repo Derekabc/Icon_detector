@@ -5,6 +5,22 @@ This repository is for the internship at T-Mobile, USA.
 
 
 # Export Trained Tensorflow Models
+## Environment Setup.
+- python=2.7
+- tensorflow==1.14.0
+- tensorflow-estimator==1.14.0 
+
+```
+conda create -n py2.7 pip python=2.7
+source activate py2.7
+pip install tensorflow==1.14.0
+pip install matplotlib
+pip install pillow
+pip install tensorflow-estimator
+cd object_detection
+protoc protos/*.proto --python_out=.
+```
+
 Edit the exporter.py file under object_detection file. We rename the original exporter.py as  exporter_frozen.py
 
 ```
