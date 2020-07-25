@@ -12,7 +12,7 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 import label_map_util
 import visualization_utils as vis_util
 
-tf.app.flags.DEFINE_string('server', '34.73.124.32:8500',  # 34.73.124.32   0.0.0.0
+tf.app.flags.DEFINE_string('server', '0.0.0.0:8500',  # 34.73.124.32   0.0.0.0
                            'PredictionService host:port')
 tf.app.flags.DEFINE_string('image',
                            '/home/dong/PycharmProjects/Icon_detector/workspace/Google_Pixel 4_Jun_30_2020_09_34_45.png',
