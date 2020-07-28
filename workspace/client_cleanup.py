@@ -11,7 +11,7 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 tf.app.flags.DEFINE_string('server', 'localhost:8500',  # 34.73.124.32   0.0.0.0   localhost
                            'PredictionService host:port')
 tf.app.flags.DEFINE_string('image',
-                           '/home/dong/PycharmProjects/Icon_detector/workspace/Google_Pixel 4_Jun_30_2020_09_34_45.png',
+                           'Google_Pixel 4_Jun_30_2020_09_34_45.png',
                            'path to image in JPEG format')
 FLAGS = tf.app.flags.FLAGS
 min_score_thresh = .60
@@ -25,7 +25,7 @@ label_map = {"1": "call", "2": "message", "3": "n0", "4": "n1", "5": "n2",
 
 
 def main(_):
-    # start = time.time()
+    start = time.time()
     # step 2: send a request
     options = [('grpc.max_send_message_length', 1000 * 1024 * 1024),
                ('grpc.max_receive_message_length', 1000 * 1024 * 1024)]
@@ -44,7 +44,7 @@ def main(_):
 
 
     # step 3: get the results
-    result_future = stub.Predict.future(request, 20.0)  # 20 secs timeout
+    result_future = stub.Predict.future(request, 10.0)  # 20 secs timeout
     result = result_future.result()
 
     boxes = np.reshape(result.outputs['detection_boxes'].float_val, [100, 4])
@@ -66,7 +66,7 @@ def main(_):
 
     with open(output_name, 'w') as outfile:
         json.dump(detection_out, outfile)
-    # print('time is ', time.time() - start)
+    print('time is ', time.time() - start)
 
 
 if __name__ == '__main__':
