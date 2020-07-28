@@ -66,7 +66,6 @@ def main(_):
 
     with open(output_name, 'w') as outfile:
         json.dump(detection_out, outfile)
-    print(f'Output saved!\n')
     print('time is ', time.time() - start)
 
 
