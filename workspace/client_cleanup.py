@@ -46,7 +46,8 @@ def main(_):
     # step 3: get the results
     result_future = stub.Predict.future(request, 10.0)  # 20 secs timeout
     result = result_future.result()
-
+    print('time is ', time.time() - start)
+    
     boxes = np.reshape(result.outputs['detection_boxes'].float_val, [100, 4])
     classes = np.squeeze(result.outputs['detection_classes'].float_val).astype(np.int32)
     scores = np.squeeze(result.outputs['detection_scores'].float_val)
@@ -66,7 +67,7 @@ def main(_):
 
     with open(output_name, 'w') as outfile:
         json.dump(detection_out, outfile)
-    print('time is ', time.time() - start)
+ 
 
 
 if __name__ == '__main__':
