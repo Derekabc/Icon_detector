@@ -37,14 +37,14 @@ def main(_):
     tensor = tf.contrib.util.make_tensor_proto(img, shape=[1] + list(img.shape))
 
     request.inputs['inputs'].CopyFrom(tensor)
-    #start = time.time()
+    start = time.time()
 
     # step 3: get the results
     result_future = stub.Predict.future(request, 20.0)  # 10 secs timeout
     result = result_future.result()
 
-    #stop = time.time()
-    #print('time is ', stop - start)
+    stop = time.time()
+    print('time is ', stop - start)
 
     NUM_CLASSES = 30
     label_map = label_map_util.load_labelmap('annotations/label_map.pbtxt')
