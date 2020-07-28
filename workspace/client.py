@@ -12,10 +12,10 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 import label_map_util
 import visualization_utils as vis_util
 
-tf.app.flags.DEFINE_string('server', '0.0.0.0:8500',  # 34.73.124.32   0.0.0.0
+tf.app.flags.DEFINE_string('server', 'localhost:8500',  # 34.73.124.32   0.0.0.0   localhost
                            'PredictionService host:port')
 tf.app.flags.DEFINE_string('image',
-                           '/home/dong/PycharmProjects/Icon_detector/workspace/Google_Pixel 4_Jun_30_2020_09_34_45.png',
+                           'Google_Pixel 4_Jun_30_2020_09_34_45.png',
                            'path to image in JPEG format')
 FLAGS = tf.app.flags.FLAGS
 min_score_thresh = .5
@@ -37,14 +37,14 @@ def main(_):
     tensor = tf.contrib.util.make_tensor_proto(img, shape=[1] + list(img.shape))
 
     request.inputs['inputs'].CopyFrom(tensor)
-    start = time.time()
+    #start = time.time()
 
     # step 3: get the results
     result_future = stub.Predict.future(request, 20.0)  # 10 secs timeout
     result = result_future.result()
 
-    stop = time.time()
-    print('time is ', stop - start)
+    #stop = time.time()
+    #print('time is ', stop - start)
 
     NUM_CLASSES = 30
     label_map = label_map_util.load_labelmap('annotations/label_map.pbtxt')
